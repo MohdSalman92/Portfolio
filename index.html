@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      </style>
+</head>
+<body>
+    <!-- .........Gear ........................... -->
+    <div class="gear-container">
+        <button id="gear-btn" onclick="gearClick()"><i class="fa-solid fa-gear"></i></button>
+    </div>
+    <!--........Navbar .............. -->
+    <nav>
+        <div class="menu" id="menu">
+        <button id="bar-btn" onclick="openClick()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div id="open-menu">
+            <button id="close-btn" onclick="closeClick()"><i class="fa-solid fa-xmark"></i></button>
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#about" class="menu-icon"><i class="fa-solid fa-user"></i>About</a></li>
+                <li><a href="#portfolio" class="menu-icon"><i class="fa-solid fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact" class="menu-icon"><i class="fa-solid fa-comments"></i>Contact</a></li>
+                <li><a href="testimonial" class="menu-icon"><i class="fa-solid fa-envelope"></i> Tesimonial</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ..........Home section Start here............. -->
+    <section class="home" id="home">
+        <div class="profile-pic">
+            <!-- <img src="./image/dp (1).jpg" alt="profile image">
+            <div class="img-strip"></div> -->
+        </div>
+        <div class="text">
+            <h3>Hi There !</h3>
+            <h1>I'm <span>Mohammed Salman</span></h1>
+            <h3>I'm a <span class="typing-text">Software Engineer</span></h3>
+            <p>I'm a Freelance UI/UX Designer and Developer based in London, England. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.</p>
+            
+            <a id="more-about" href="#about"><i class="fa fa-user"></i> More About Me</a>
+            <a id="port-link" href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a> 
+        </div>  
+    </section>
+    <hr>
+<!-- ..............About Section................. -->
+    <section>
+        <div  class="about" id="about">
+        <h1>About <span>Me</span></h1>
+        <p  class="about-desc">I DESIGN AND CODE BEAUTIFUL THINGS, AND I LOVE WHAT I DO.</p>
+        <div class="grid-container">
+
+            <div class="left-col">
+                <img src="./image/dp (1).jpg" alt="profile pic">
+                <div class="pic-strip"></div>
+            </div>
+
+            <div class="middle-col">
+                <li><span>First Name</span>Mohammed</li>
+                <li><span>Last Name</span>Salman</li>
+                <li><span>Birthday</span>10 April 1992</li>
+                <li><span>Nationality</span>Indian</li>
+                <li><span>Experience</span>Fresher</li>
+                <li><span>Address</span>Delhi</li>
+            </div>
+
+            <div class="right-col">
+                <li><span>Freelance</span>Available</li>
+                <li><span>Languages</span>English|Hindi</li>
+                <li><span>Phone</span>+91 99 580 98 225</li>
+                <li><span>Email</span>salmanansaari92@gmail.com</li>
+                <li><span>LinkedIn</span>salmanansaari92</li>
+                <li><span>Git Hub</span>salmanansaari92</li>
+            </div>
+        </div>
+        <div class="cv-download"><a href=""><i class="fa-solid fa-download"></i>Download my cv</a></div>
+    </div>
+        <hr>
+        <!-- ......Education................ -->
+        <div class="education">
+            <h2>EDUCATION</h2>
+            <div class="box">
+            <p class="year">2010 - 2016</p>
+            <h3>BCA - IGNOU (Delhi)</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim sint, sequi exercitationem et facere!</p>
+
+            <p class="year">2008 - 2010</p>
+            <h3>12th - UP Board</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim sint, sequi exercitationem et facere!</p>
+
+            <p class="year">2007 - 2008</p>
+            <h3>10th - UP Board</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim sint, sequi exercitationem et facere!</p> 
+        </div>
+        </div>
+        <hr class="hr-strip">
+
+        <div class="skills">
+            <h2>SKILLS</h2>
+            <div class="skill-container">
+                <div class="skill-left">
+                    <li class="skill">HTML</li>
+            <div class="progress-container">
+                <div class="progress-data" style="width: 80%;"><span>80%</span></div>
+            </div>
+            <li class="skill">CSS</li>
+            <div class="progress-container">
+                <div class="progress-data" style="width: 70%"><span>70%</span></div>
+            </div>
+            <li class="skill">JavaScript</li>
+            <div class="progress-container">
+                <div class="progress-data" style="width: 60%"><span>60%</span></div>
+            </div>
+                </div>
+
+                <div class="skill-right">
+                    <li class="skill">React</li>
+                    <div class="progress-container">
+                        <div class="progress-data" style="width: 70%"><span>70%</span></div>
+                    </div>
+        
+                    <li class="skill">BootStrap</li>
+                    <div class="progress-container">
+                        <div class="progress-data" style="width: 80%"><span>80%</span></div>
+                    </div>
+        
+                    <li class="skill">Git & GitHub</li>
+                    <div class="progress-container">
+                        <div class="progress-data" style="width: 50%"><span>50%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+<!-- ...........Portfolio...................... -->
+<Section>
+    <div class="portfolio" id="portfolio">
+        <h1>My <span>Portfolio</span></h1>
+        <p>A few recent design and coding projects. Want to see more? Email me</p>
+        <img src="/image/project (1).jpg" alt="project1">
+        <img src="image/project (2).jpg" alt="project2">
+        <img src="image/project (3).jpg" alt="project3">
+        <img src="image/project (4).jpg" alt="project4">
+        <img src="image/project (5).jpg" alt="project5">
+        <img src="image/project (6).jpg" alt="project6">
+    </div>
+</Section>
+<hr>
+<!-- ........Contact Section Starts............. -->
+<section>
+    <div class="contact" id="contact">
+        <h1>GET <span>IN TOUCH</span></h1>
+        <p>I'M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS.</p>
+        <div class="contact-grid-container">
+        <div class="info">
+            <li><span><i class="fa-brands fa-whatsapp"></i>Phone</span>+91 99 580 98 225</li>
+            <li><span><i class="fa-sharp fa-solid fa-envelope"></i>Email</span>salmanansaari92@gmail.com</li>
+            <li><span><i class="fa-brands fa-github"></i>GitHub</span>salmanansaari92</li>
+            <li><span><i class="fa-brands fa-linkedin"></i>LinkedIn</span>salmanansaari92</li>
+            <li><span>Social Profiles</span><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-google"></i></li>            
+        </div>
+
+        <form action="#">
+            <p>If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.</p>
+            <input type="text" name="name" id="name" placeholder="YOUR NAME">
+            <input type="email" name="email" id="email" placeholder="YOUR EMAIL">
+            <input type="text" name="message" id="message" placeholder="YOUR MESSAGE">
+            <button class="btn-submit"><i class="fa-sharp fa-solid fa-paper-plane"></i>Send</button>
+        </form>
+    </div>
+    </div>
+</section>
+<hr>
+<!-- custom js cdn ......... -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+<script>
+const bar = document.getElementById("bar-btn");
+const close = document.getElementById("close-btn");
+const opMenu = document.getElementById("open-menu");
+
+function openClick() {
+    opMenu.style.display ="block";
+    bar.style.display = "none";
+}
+function closeClick(){
+    opMenu.style.display ="none";
+    bar.style.display = "block";
+
+}
+ /*..........typing Effects......... */
+var type = new Typed('.typing-text',{strings:['web developer','React Developer','Front End Developer'],typeSpeed: 120,
+loop: true})
+
+</script>
+</body>
+</html>

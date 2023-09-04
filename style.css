@@ -1,0 +1,390 @@
+:root{
+    --theme-color: yellow;
+    --secondry-color: white;
+    --bg-color: black;
+}
+html{
+    color-scheme: dark;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+/* ...........Common CSS for whole website............. */
+li{
+    list-style: none;
+    font-size: 1.2rem;
+        padding: 12px;
+    }
+    li span{
+        display: block;
+    } 
+    h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    h1+p{
+        text-align: center;
+        padding: 1rem 0rem 4rem 0;
+    
+    }
+    h1 span{
+        color: var(--theme-color);
+        }
+        h2{
+            text-align: center;
+            margin: 2rem 0rem;
+        }
+    .btn{
+        .contact form button{
+            padding: 1rem;
+            width: 40%;
+            background-color: var(--theme-color);
+            color: var(--bg-color);
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    }
+    hr{
+        border-color: var(--theme-color);
+        width: 80%;
+        margin: auto;
+    }
+   
+/* .......Gear Section........................ */
+.gear-container button{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: -35px;
+    bottom: 50%;
+    background-color: white;
+    z-index: 100;
+}
+.gear-container button i{
+    color: black;
+    background-color: white;
+    animation: 1s gear-rotate linear infinite;
+    font-size: 2rem;
+}
+@keyframes gear-rotate {
+    0% { 
+      transform: rotate(0deg); 
+    }
+    100% { 
+      transform: rotate(-180deg); 
+    }
+  }
+/* .......Gear Section........................ */
+
+/* ............menu section............... */
+#menu{
+    position: absolute;
+    font-size: 1rem;
+    
+}
+button {
+    margin: 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: transparent;
+
+}
+button i{
+    font-size: 30px;
+    color: white;
+}
+#open-menu{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    display: none;
+    transition:0.4s ease-out;
+    background: rgba(0,0,0,0.8);
+}
+ul{
+    margin: 0px 20px;
+    
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+ul li i{
+    margin-right: 15px;   
+}
+/* ...........menu Section end................... */
+ 
+/* ............Home section Starts......... */
+.home{
+    width:100%;
+    min-height: 100vh;
+    text-align: center;
+}
+.home .profile-pic{
+    width: 200px;
+    height: 200px;
+    border: 5px solid var(--theme-color);
+    border-radius: 50%;
+    background-image: url("./image/dp (1\).jpg");
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.home .text{
+    padding: 2rem;
+}
+.home .text  a{
+    text-decoration: none;
+    width: 250px;
+    padding: 1rem;
+    margin: 1rem auto;
+    background-color: var(--theme-color);
+    color: var(--bg-color);
+    display: block;
+    border-radius: 2rem;
+}
+.home .text p{
+    margin: 2rem 0;
+}
+/* .........Home Section End ........................ */
+
+/* ...........About Section Start................... */
+
+.about{
+    text-align: center;
+     padding: 5rem;
+} 
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    text-align: left;
+    margin: 0% 6%;
+}
+.about img{
+    width: 100%;
+    min-width: 400px;
+    height: auto;
+}
+.about .cv-download{
+    margin: 2rem 0rem;
+}
+.about .cv-download a{
+    text-decoration: none;
+    color: var(--bg-color);
+    background-color: var(--theme-color);
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* ......education............. */
+.education{
+    padding: 5rem;
+    margin-left: 8rem;
+}
+.education .box{
+    width: 30rem;
+    padding: 0 2rem;
+    /* padding-bottom: 4rem; */
+    border-left: 0.2rem solid var(--theme-color);
+}
+.education h3{
+    color: var(--theme-color);
+    position: relative;
+
+}
+.education p{
+    margin:1.2rem 0 ;
+}
+.education h3::before{
+    content: '';
+    position: absolute;
+    top: 0.1rem; left: -2.85rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background:var(--theme-color);
+}
+/* .....skills........ */
+.skills{
+    padding: 3rem;
+
+}
+.skills .skill-container{
+    display: flex;
+    flex-direction: column;
+}
+.skills .skill-container .skill-left, .skill-right{
+    width: 100%;
+    padding:0 2rem;
+}
+.skills li{
+    font-size: 1.5rem;
+    margin: 2rem 0rem;
+}
+.progress-container{
+    width: 90%;
+    height: 20px;
+    background-color:rgba(0,0,0,0.9);
+    border: 1px solid var(--theme-color);
+    border-radius: 30px;
+}
+.progress-container .progress-data{
+    background-color: var(--theme-color);
+    color: var(--bg-color);
+    height: inherit;
+    border-radius: inherit;
+}
+.progress-container .progress-data span{
+    padding-left: 2rem;
+    font-weight: 700;
+}
+/* ...........portfolio........... */
+.portfolio img{
+    width: 100%;
+    margin: 5px;
+
+}
+/* ....Contact Section...... */
+.contact{
+    padding: 5rem;
+
+}
+.contact .contact-grid-container{
+    display: flex;
+    flex-direction: column;
+}
+.contact .info i{
+    color: var(--theme-color);
+    padding: 0 1rem 0 0;
+}
+.contact form{
+        padding-left: 5%;
+}
+.contact form input{
+    width: 100%;
+    height: 2rem;
+    border: none;
+    margin: 1rem 0rem;
+    padding: 2rem;
+    border-radius: 30px;
+}
+.contact form button{
+    padding: 1rem;
+    width: 40%;
+    background-color: var(--theme-color);
+    color: var(--bg-color);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.contact form button i{
+    color: var(--bg-color);
+    margin-right: 1rem;
+}
+.contact form button:hover{
+    opacity: 0.7;
+}
+
+/* ........media for iPads and Tabs.............. */
+@media only screen and (min-width:480px) {
+    .grid-container{
+        grid-template-columns: auto;
+    } 
+    
+}
+/* ........media for small screen Laptops.............. */
+@media only screen and (min-width:768px) {
+    /* ....Home..... */
+    .home{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .home .text{
+        text-align: left;
+        width: 50%;
+        /* border: 2px solid white; */
+
+    }
+    .home .profile-pic{
+        width:50%;
+        height: 50vh;
+        border: 0;
+        border-radius: 0;
+        /* border: 2px solid red; */
+    }
+   
+    .home img{
+        width: 50%;
+        min-width: 600px;
+        height:auto;
+        border: none;
+        border-radius: 0;
+        border: 2px solid red;
+    }
+    .home .text h1{
+        text-align: left;
+    }
+.home .text  a{
+    display: inline-block;
+}
+    /* .....About............ */
+    .grid-container{
+        grid-template-columns: auto auto;
+
+    } 
+    .portfolio img{
+        width: 48%;
+        margin: 5px;
+    }
+}
+/* ........media for Extra large Screens, TV.............. */
+@media only screen and (min-width:1024px) {
+    /* ......Home...... */
+    .home .profile-pic{
+        width:50%;
+        height:100vh;
+    }
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+    .contact .contact-grid-container{
+        flex-direction: row;
+    }
+    .skills .skill-container{
+        flex-direction: row;
+        }
+        .skills .skill-container .skill-left, .skill-right{
+            width: 50%;
+        }
+        .portfolio img{
+            width: 32%;
+            margin: 5px;
+        }
+}
+/* ........media for Extra large Screens, TV.............. */
+@media only screen and (min-width:1200px) {
+    
+    /* .....About.... */
+    .grid-container{
+        grid-template-columns: auto auto auto;
+
+    }
+    .contact .contact-grid-container{
+        flex-direction: row;
+    }
+    .skills .skill-container{
+        flex-direction: row;
+        }
+        .skills .skill-container .skill-left, .skill-right{
+            width: 50%;
+        }
+}
