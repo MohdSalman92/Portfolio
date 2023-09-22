@@ -129,7 +129,7 @@ ul li i{
 
 /* ......Home section Starts..... */
 .home{
-    /* min-height: 100vh; */
+    min-height: 100vh;
     text-align: center;
 }
 .home .profile-pic{
