@@ -1,153 +1,44 @@
-:root{
-    --theme-color: yellow;
-    --secondry-color: white;
-    --bg-color: black;
+:root {
+  --theme-color: yellow;
+  --secondry-color: white;
+  --bg-color: black;
 }
-html{
-    color-scheme: dark;
+html {
+  color-scheme: dark;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: poppins, sans-serif;
-    /* outline: 1px solid red; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  /* outline: 1px solid red; */
 }
 /* ..Common CSS for whole website... */
-li{
-    list-style: none;
-    font-size: 1.2rem;
-        padding: 12px;
-    }
-    li span{
-        display: block;
-    } 
-    h1{
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-align: center;
-    }
-    h1+p{
-        text-align: center;
-        padding: 1rem 0rem 4rem 0;
-    
-    }
-    h1 span{
-        color: var(--theme-color);
-        }
-        h2{
-            text-align: center;
-            margin: 2rem 0rem;
-        }
-    .btn{
-            padding: 1rem;
-            width: 40%;
-            background-color: var(--theme-color);
-            color: var(--bg-color);
-            border-radius: 30px;
-            cursor: pointer;
-    
-    }
-    hr{
-        border-color: var(--theme-color);
-        width: 80%;
-        margin: auto;
-    }
-   
-    /* .......Gear Section........................ */
-.gear-container button{
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    right: -35px;
-    bottom: 50%;
-    background-color: white;
-    z-index: 100;
+li {
+  list-style: none;
+  font-size: 1.2rem;
+  padding: 12px;
 }
-.gear-container button i{
-    color: black;
-    background-color: white;
-    animation: 1s gear-rotate linear infinite;
-    font-size: 2rem;
+li span {
+  display: block;
 }
-@keyframes gear-rotate {
-    0% { 
-      transform: rotate(0deg); 
-    }
-    100% { 
-      transform: rotate(-180deg); 
-    }
-  }
-/* .......Gear Section............ */
-
-/* ......menu section....... */
-#menu{
-    position: absolute;
-    font-size: 1rem;
-    top: 0;
-    
+h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
 }
-button {
-    margin: 30px;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-    background: transparent;
+h1 + p {
+  text-align: center;
+  padding: 1rem 0rem 4rem 0;
 }
-#close-btn{
-    margin-top: -40px;
-    
+h1 span {
+  color: var(--theme-color);
 }
-
-button i{
-    font-size: 30px;
-    color: white;
+h2 {
+  text-align: center;
+  margin: 2rem 0rem;
 }
-#open-menu{
-    position: absolute;
-    display:flex;
-    flex-direction: column;
-    display: none;
-    transition:0.4s ease-out;
-    background: rgba(0,0,0,0.8);
-}
-#open-menu ul li a i{
-    color: var(--theme-color);
-}
-ul{
-    margin: 0px 20px;
-    
-}
-ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-ul li i{
-    margin-right: 15px;   
-}
-
-/* ......Home section Starts..... */
-.home{
-    min-height: 100vh;
-    text-align: center;
-}
-.home .profile-pic{
-    width: 200px;
-    height: 200px;
-    border: 5px solid var(--theme-color);
-    border-radius: 50%;
-    /* background-image: url("https://mohdsalman92.github.io/hosted-image/s_officeRight.jpg"); */
-    background-image: url("./image/s_off.png");
-    background-size:cover;
-    background-position: center;
-    margin: 3rem auto;
-}
-
-.home .text{
-    padding: 2rem;
-}
-.home .text  a{
+.btn {
     text-decoration: none;
     width: 250px;
     padding: 1rem;
@@ -155,221 +46,337 @@ ul li i{
     background-color: var(--theme-color);
     color: var(--bg-color);
     display: block;
-    /* border-radius: 2rem; */
-}
-.home .text p{
-    margin: 2rem 0;
-}
-/* ....Home Section End .......... */
-/* ...........About Section Start................... */
-
-.about{
-    width: 100%;
-    text-align: center;
-     padding: .5rem;
-} 
-.grid-container{
-    display: grid;
-    grid-template-columns: auto;
-    text-align: left;
-}
-.about table span{
-    margin-right: 1rem;
-    color: var(--theme-color);
-}
-.about table td{
-    padding: 0.5rem;
-}
-/* .about .about-img-container{
-    width: 100%;
-} */
-.about img{
-    width: 100%;
-    /* min-width: 400px; */
-    /* height: auto; */
-}
-.about .cv-download{
-    margin: 2rem 0rem;
-}
-.about .cv-download a{
-    text-decoration: none;
-    color: var(--bg-color);
-    background-color: var(--theme-color);
-    padding: 10px 25px;
-    /* border-radius: 30px; */
-    font-weight: 600;
+    cursor: pointer;
     text-transform: uppercase;
 }
+.btn i{
+    color: var(--bg-color);
+}
+hr {
+  border-color: var(--theme-color);
+  width: 85%;
+  margin: auto;
+}
+
+/* .......Gear Section........................ */
+.gear-container button {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: -35px;
+  bottom: 50%;
+  background-color: white;
+  z-index: 100;
+}
+.gear-container button i {
+  color: black;
+  background-color: white;
+  animation: 1s gear-rotate linear infinite;
+  font-size: 2rem;
+}
+@keyframes gear-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+/* .......Gear Section............ */
+
+/* ......menu section....... */
+#menu {
+  position: absolute;
+  font-size: 1rem;
+  top: 0;
+}
+button {
+  margin: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+}
+#close-btn {
+  margin-top: -40px;
+}
+
+button i {
+  font-size: 30px;
+  color: white;
+}
+#open-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  display: none;
+  transition: 0.4s ease-out;
+  background: rgba(0, 0, 0, 0.8);
+}
+#open-menu ul li a i {
+  color: var(--theme-color);
+}
+ul {
+  margin: 0px 20px;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+ul li i {
+  margin-right: 15px;
+}
+
+/* ......Home section Starts..... */
+.home {
+  /* min-height: 100vh; */
+  text-align: center;
+  padding: 0 2rem;
+}
+.home .profile-pic {
+  width: 200px;
+  height: 200px;
+  border: 5px solid var(--theme-color);
+  border-radius: 50%;
+  /* background-image: url("https://mohdsalman92.github.io/hosted-image/s_officeRight.jpg"); */
+  background-image: url("./image/s_off.png");
+  background-size: cover;
+  background-position: center;
+  margin: 3rem auto;
+}
+
+.home .text {
+  padding: 2rem;
+}
+/* .home .text a {
+  text-decoration: none;
+  width: 250px;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: var(--theme-color);
+  color: var(--bg-color);
+  display: block;
+} */
+.home .text p {
+  margin: 2rem 0;
+  text-align: justify;
+}
+/* ....Home Section End .......... */
+
+/* ....About Section Start......... */
+
+.about {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  text-align: left;
+}
+.about table span {
+  margin-right: 1rem;
+  color: var(--theme-color);
+}
+.about table td {
+  padding: 0.4rem;
+  text-align: left;
+}
+.about img {
+  width: 100%;
+  padding:0 2rem;
+  height: 600px;
+}
+.about .cv-download {
+  margin: 2rem 0rem;
+}
+/* .about .cv-download a {
+  text-decoration: none;
+  color: var(--bg-color);
+  background-color: var(--theme-color);
+  padding: 10px 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+} */
 
 /* ......education............. */
 
-.education{
-    width: 100%;
-    padding: 5rem;
+.education {
+  width: 100%;
+  padding: 5rem;
+  margin: 0 auto;
 }
-.education .box{
-    padding: 0 2rem;
-    /* padding-bottom: 4rem; */
-    border-left: 0.2rem solid var(--theme-color);
+.education .box {
+  padding: 0 2rem;
+  /* padding-bottom: 4rem; */
+  border-left: 0.2rem solid var(--theme-color);
 }
-.education h3{
-    color: var(--theme-color);
-    position: relative;
-    width: inherit;
+.education h3 {
+  color: var(--theme-color);
+  position: relative;
+  width: inherit;
 }
-.education p{
-    width: 100%;
-    margin:1.2rem 0;
+.education p {
+  width: 100%;
+  margin: 1.2rem 0;
 }
-.education h3::before{
-    content: '';
-    position: absolute;
-    top: 0.1rem; left: -2.85rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 50%;
-    background:var(--theme-color);
+.education h3::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: -2.85rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background: var(--theme-color);
 }
 /* .....skills........ */
-.skills{
-    padding: 3rem;
-
+.skills {
+  padding: 3rem;
 }
-.skills .skill-container{
-    display: flex;
-    flex-direction: column;
+.skills li {
+  font-size: 1.5rem;
+  margin: 2rem 0rem;
 }
-.skills .skill-container .skill-left, .skill-right{
-    width: 100%;
-    padding:0 2rem;
+.skills .skill-container {
+  width: 100%;
 }
-.skills li{
-    font-size: 1.5rem;
-    margin: 2rem 0rem;
+.skills .progress-container {
+  width: 90%;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid var(--theme-color);
+  border-radius: 30px;
 }
-.progress-container{
-    width: 90%;
-    height: 20px;
-    background-color:rgba(0,0,0,0.9);
-    border: 1px solid var(--theme-color);
-    border-radius: 30px;
+.skills .progress-container .progress-data {
+  background-color: var(--theme-color);
+  color: var(--bg-color);
+  /* color: whitesmoke; */
+  height: inherit;
+  border-radius: inherit;
 }
-.progress-container .progress-data{
-    background-color: var(--theme-color);
-    color: var(--bg-color);
-    height: inherit;
-    border-radius: inherit;
-}
-.progress-container .progress-data span{
-    padding-left: 2rem;
-    font-weight: 700;
+.skills .progress-container .progress-data span {
+  padding-left: 2rem;
+  font-weight: 700;
 }
 /* ...........portfolio........... */
-.portfolio{
-    padding: 1rem;
+.portfolio {
+  padding: 1rem;
 }
-.portfolio img{
-    width: 100%;
-    margin: 5px 0;
-
+.portfolio img {
+  width: 100%;
+  margin: 5px 0;
 }
 /* ....Contact Section...... */
-.contact{
-    padding: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+.contact {
+  padding: 3rem;
+  margin: 0 auto;
 }
-.contact .info i{
-    color: var(--theme-color);
-    padding: 0 1rem 0 0;
+.contact .info i {
+  color: var(--theme-color);
+  text-align: left;
+  margin-right: 1rem;
 }
-.contact form input{
-    width: 100%;
-    height: 2rem;
-    border: none;
-    margin: 1rem 0rem;
-    padding: 2rem;
-    /* border-radius: 30px; */
+.contact form input {
+  width: 100%;
+  height: 2rem;
+  border: none;
+  margin: 1rem 0rem;
+  padding: 2rem;
 }
-.contact form button{
-    text-decoration: none;
-    min-width: 50%;
-    max-width: 400px;
-    color: var(--bg-color);
-    background-color: var(--theme-color);
-    padding: 10px 25px;
-    /* border-radius: 30px; */
-    font-weight: 600;
-    text-transform: uppercase;
+.contact form button {
+  margin-left: 0;
+} 
+.contact form button i {
+  color: var(--bg-color);
+  margin-right: 1rem;
 }
-.contact form button i{
-    color: var(--bg-color);
-    margin-right: 1rem;
+.contact form button:hover {
+  opacity: 0.7;
 }
-.contact form button:hover{
-    opacity: 0.7;
+.contact > .title {
+  font-size: 1.5rem;
 }
+.contact > p {
+  font-size: 1.6rem;
+  color: var(--theme-color);
+}
+.contact-links > a {
+  font-size: 1.3rem;
+  color: var(--secondry-color);
+  padding: 5px;
+  text-decoration: none;
+  margin: 12px;
+}
+.contact-links > a:hover {
+  background-color: var(--theme-color);
+  color: var(--bg-color);
+}
+.contact-footer {
+  text-align: center;
+  font-size: 2rem;
+}
+.contact-footer .title,
+i {
+  color: var(--theme-color);
+}
+/*contact section end */
 
-  /* Contact section start */
-  .contact{
-    width: 100%;
-    text-align: center;
-    padding-top: 80px;
-
-    
-  }
-  .contact > .title{
-    font-size: 1.5rem;
-  }
-  .contact> p{
-    font-size: 1.6rem;
-    color: var(--theme-color);
-  }
-  .contact-links> a{
-    font-size: 1.3rem;
-    color: var(--secondry-color);
-    padding: 5px;
-    text-decoration: none;
-    margin: 12px;
-
-    
-  }
-  .contact-links> a:hover{
-    background-color:var(--theme-color);
-    color: var(--bg-color);
-    
-  }
-  /*contact section end */
-
-  /* footer start */
-  footer{
-    text-align: center;
-    padding: 50px;
-  }
-  /*footer end */
-
+/* footer start */
+footer {
+  text-align: center;
+  padding: 50px;
+}
+/*footer end */
 
 /* ....media for iPad.... */
-@media only screen and (min-width:768px){
-    .projects-container{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    .skill-container{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
+@media only screen and (min-width: 768px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .home .profile-pic {
+    width: 80%;
+    height: 500px;
+    border: 5px solid var(--theme-color);
+    border: none;
+    border-radius: 0;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .grid-col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact .info,
+  span {
+    text-align: left;
+  }
+  .contact .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-
 /* ....media for large Screens, TV.. */
-@media only screen and (min-width:1024px){
-
+@media only screen and (min-width: 1024px) {
 }
 /* ....media for extra large Screens, TV.. */
-@media only screen and (min-width:1200px){
-    .projects-container{
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* .skills .skill-container{
         display: grid;
-        grid-template-columns: auto auto auto;
-    }
-
+        grid-template-columns:auto auto;
+    } */
 }
