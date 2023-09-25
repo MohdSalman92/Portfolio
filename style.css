@@ -12,6 +12,7 @@ html {
   box-sizing: border-box;
   font-family: poppins, sans-serif;
   /* outline: 1px solid red; */
+  overflow: none;
 }
 /* ..Common CSS for whole website... */
 li {
@@ -21,6 +22,10 @@ li {
 }
 li span {
   display: block;
+}
+a {
+  text-decoration: none;
+  /* color: white; */
 }
 h1 {
   font-size: 1.5rem;
@@ -49,8 +54,14 @@ h2 {
     cursor: pointer;
     text-transform: uppercase;
 }
+.btn:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+
+}
 .btn i{
     color: var(--bg-color);
+    margin-right: 5px;
 }
 hr {
   border-color: var(--theme-color);
@@ -63,7 +74,7 @@ hr {
   width: 60px;
   height: 60px;
   position: fixed;
-  right: -35px;
+  right: 0;
   bottom: 50%;
   background-color: white;
   z-index: 100;
@@ -82,57 +93,78 @@ hr {
     transform: rotate(-180deg);
   }
 }
-/* .......Gear Section............ */
+/* .......Gear Section end........... */
 
-/* ......menu section....... */
-
-#menu {
-  position:absolute;
-  font-size: 1rem;
+/* ......Navbar section....... */
+.nav-bar {
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 0 1rem;
+  position: sticky;
   top: 0;
 }
-button {
-  margin: 30px;
-  border: none;
-  font-size: 1rem;
+.nav-bar .hamburger {
   cursor: pointer;
-  background: transparent;
 }
-#close-btn {
-  margin-top: -40px;
-  /* position: fixed; */
+.nav-bar .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
-
-button i {
-  font-size: 30px;
-  color: white;
+.nav-bar .nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 50px;
+  background-color: rgba(0, 0, 0, 0.6);
+  min-width: 12rem;
+  /* max-width: 40%; */
+  padding-left: 1rem;
+  transition: 0.3s;
 }
-#open-menu {
-  position: absolute;
-  /* display: flex;
-  flex-direction: column; */
-  display: none;
-  transition: 0.4s ease-out;
-  background: rgba(0, 0, 0, 0.8);
+.nav-bar .nav-item {
+  margin: 1rem 0;
 }
-#open-menu ul li a i {
+.nav-bar .nav-item i{
+  margin-right: 1rem;
+}
+.nav-cv{
+  font-size: 1rem;
   color: var(--theme-color);
 }
-ul {
-  margin: 0px 20px;
+.nav-cv:hover{
+  border-bottom: 1px solid var(--theme-color);
 }
-ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
+.nav-bar .nav-menu.active {
+  left: 0;
 }
-ul li i {
-  margin-right: 15px;
-}
+.nav-bar .nav-link {
+  transition: 0.7s ease;
+  color: var(--secondry-color);
 
+}
+.nav-bar .nav-link:hover {
+  color: var(--theme-color);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 /* ......Home section Starts..... */
 .home {
-  min-height: 100vh;
+  min-height:calc(100vh-20px);
   text-align: center;
   padding: 0 2rem;
 }
@@ -155,7 +187,6 @@ ul li i {
   margin: 2rem 0;
   text-align: justify;
 }
-/* ....Home Section End .......... */
 
 /* ....About Section Start......... */
 
@@ -164,13 +195,18 @@ ul li i {
   text-align: center;
   padding: 0.5rem;
 }
-
+.about .about-right-col{
+  margin: 0 3rem;
+}
+.about .about-right-col span{
+  color: var(--theme-color);
+}
 .about table span {
   margin-right: 1rem;
   color: var(--theme-color);
 }
 .about table td {
-  padding: 0.4rem;
+  padding: 0.3rem;
   text-align: left;
 }
 .about img {
@@ -178,10 +214,6 @@ ul li i {
   /* padding:0 1rem; */
   height: 500px;
 }
-.about .cv-download {
-  margin: 2rem 0rem;
-}
-
 /* ......education............. */
 
 .education {
@@ -191,7 +223,6 @@ ul li i {
 }
 .education .box {
   padding: 0 2rem;
-  /* padding-bottom: 4rem; */
   border-left: 0.2rem solid var(--theme-color);
 }
 .education h3 {
@@ -219,11 +250,11 @@ ul li i {
 }
 .skills li {
   font-size: 1.5rem;
-  margin: 2rem 0rem;
+  margin: 0.5rem 0rem;
 }
-.skills .skill-container {
+/* .skills .skill-container {
   width: 100%;
-}
+} */
 .skills .progress-container {
   width: 90%;
   height: 20px;
@@ -237,6 +268,9 @@ ul li i {
   /* color: whitesmoke; */
   height: inherit;
   border-radius: inherit;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
 .skills .progress-container .progress-data span {
   padding-left: 2rem;
@@ -260,6 +294,12 @@ ul li i {
   text-align: left;
   margin-right: 1rem;
 }
+.contact .info a{
+  color: var(--secondry-color);
+}
+.contact .info a:hover {
+  border-bottom: 2px solid var(--theme-color);
+}
 .contact form input {
   width: 100%;
   height: 2rem;
@@ -267,16 +307,16 @@ ul li i {
   margin: 1rem 0rem;
   padding: 2rem;
 }
-.contact form button {
+ .contact form button {
   margin-left: 0;
+  border: none;
 } 
+/*
 .contact form button i {
   color: var(--bg-color);
   margin-right: 1rem;
-}
-.contact form button:hover {
-  opacity: 0.7;
-}
+} */
+
 .contact > .title {
   font-size: 1.5rem;
 }
@@ -297,7 +337,8 @@ ul li i {
 }
 .contact-footer {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin: 2rem;
 }
 .contact-footer .title,
 i {
@@ -314,9 +355,6 @@ footer {
 
 /* ....media for iPad.... */
 @media only screen and (min-width: 768px) {
-  #close-btn {
-    margin-top: 30px;
-  }
   .home {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -364,16 +402,19 @@ footer {
 }
 /* ....media for extra large Screens, TV.. */
 @media only screen and (min-width: 1200px) {
-  body {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
   .projects-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  /* .skills .skill-container{
-        display: grid;
-        grid-template-columns:auto auto;
-    } */
+}
+
+@media only screen and (min-width: 1400px) {
+  .app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 2px solid var(--theme-color);
+  }
+  .nav-bar .nav-menu.active {
+   position: absolute;
+  }
 }

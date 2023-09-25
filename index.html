@@ -15,6 +15,7 @@
     </style>
   </head>
   <body>
+    <div class="app-container">
     <!-- .........Gear ........................... -->
     <div class="gear-container">
       <button id="gear-btn" onclick="gearClick()">
@@ -22,41 +23,42 @@
       </button>
     </div>
     <!--........Navbar .............. -->
-    <nav>
-      <div class="menu" id="menu">
-        <button id="bar-btn" onclick="openClick()">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-      <div id="open-menu">
-        <button id="close-btn" onclick="closeClick()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <ul>
-          <li>
-            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
-          </li>
-          <li>
-            <a href="#about" class="menu-icon"
-              ><i class="fa-solid fa-user"></i>About</a
-            >
-          </li>
-          <li>
-            <a href="#portfolio" class="menu-icon"
+    <nav class="nav-bar">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="#home"><i class="fa-solid fa-house"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" class="menu-icon"
+          ><i class="fa-solid fa-user"></i>About</a
+        >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio" class="menu-icon"
               ><i class="fa-solid fa-briefcase"></i>Portfolio</a
             >
-          </li>
-          <li>
-            <a href="#contact" class="menu-icon"
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#contact" class="menu-icon"
               ><i class="fa-solid fa-comments"></i>Contact</a
             >
-          </li>
-          <li>
-            <a href="testimonial" class="menu-icon"
-              ><i class="fa-solid fa-envelope"></i> Tesimonial</a
-            >
-          </li>
-        </ul>
+        </li>
+        <!-- <li>
+          <a class="nav-link" href="testimonial" class="menu-icon"
+            ><i class="fa-solid fa-envelope"></i> Tesimonial</a
+          >
+        </li> -->
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div class="cv-download">
+        <a class="nav-cv"
+          href="https://mohdsalman92.github.io/Portfolio/image/Resume.pdf"
+          target="_blank"
+          ><i class="fa-solid fa-download"></i> <span>Download my cv</span></a>
       </div>
     </nav>
     <!-- ..........Home section Start here............. -->
@@ -99,7 +101,7 @@
             </div>
           </div>
 
-          <div class="middle-col">
+          <div class="about-right-col">
             <table>
               <tr>
                 <td><span>First Name</span></td>
@@ -132,25 +134,25 @@
               </tr>
               <tr>
                 <td><span>Languages</span></td>
-                <td>English|Hindi</td>
+                <td>English |  Hindi</td>
               </tr>
               <tr>
                 <td><span>Phone</span></td>
                 <td>+91 99 580 98 225</td>
               </tr>
               <tr>
-                <td><span>Email</span></td>
+                <td><span class="Eid">Email</span></td>
                 <td>salmanansaari92@gmail.com</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td><span>LinkedIn</span></td>
                 <td>salmanansaari92</td>
               </tr>
               <tr>
                 <td><span>GitHub</span></td>
                 <td>salmanansaari92</td>
-              </tr>
-              
+              </tr> -->
+
             </table>
             <div class="cv-download">
               <a class="btn"
@@ -168,11 +170,11 @@
               <tr>
                 <th></th>
               </tr>
-              
+
             </table>
           </div>
         </div>
-        
+
       </div>
     </section>
       <hr />
@@ -288,40 +290,43 @@
             </li>
             <li>
               <span><i class="fa-brands fa-github"></i>GitHub</span
-              >MohdSalman92
+              ><a href="https://github.com/MohdSalman92" target="_blank">MohdSalman92</a>
             </li>
             <li>
               <span><i class="fa-brands fa-linkedin"></i>LinkedIn</span
-              >salmanansaari92
+              ><a href="https://www.linkedin.com/in/mohd-salman-70644963/" target="_blank">salmanansaari92</a>
             </li>
             <li>
-              <span>Social Profiles</span><i class="fa-brands fa-facebook"></i
-              ><i class="fa-brands fa-instagram"></i
-              ><i class="fa-brands fa-twitter"></i
-              ><i class="fa-brands fa-google"></i>
+              <span>Social Profiles</span>
+              <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/salmanansaari92" target="_blan"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.twitter.com" target="_blan"><i class="fa-brands fa-twitter" target="_blan"></i></a>
+              <a href="https://www.google.com"><i class="fa-brands fa-google"></i></a>
             </li>
           </div>
 
-          <form action="#">
+          <form action="https://formsubmit.co/5d6c4c394ebc71cabf8a63b3498f71df" method="POST">
             <p>
               If you have any suggestion, project or even you want to say
               Hello.. please fill out the form below and I will reply you
               shortly.
             </p>
-            <input type="text" name="name" id="name" placeholder="YOUR NAME" />
+            <input type="text" name="name" id="name" placeholder="YOUR NAME"  required/>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="YOUR EMAIL"
+              required
             />
             <input
               type="text"
               name="message"
               id="message"
               placeholder="YOUR MESSAGE"
+              required
             />
-            <button class="btn-submit btn">
+            <button type="submit" class="btn">
               <i class="fa-sharp fa-solid fa-paper-plane"></i>Send
             </button>
           </form>
@@ -333,19 +338,18 @@
       <div class="title">Let's work together...</div>
       <p>How do you take your Tea?</p>
       <div class="contact-links">
-        <a href="https://www.facebook.com" target="_blank"
+        <a href="https://www.facebook.com/salmanansaari92" target="_blank"
           ><i class="fa-brands fa-facebook"> </i> Facebook</a
         >
-        <a href="https://www.instagram.com" target="_blank"
+        <a href="https://www.instagram.com/salmanansaari92" target="_blank"
           ><i class="fa-brands fa-square-instagram"></i> Instagram</a
         >
         <a href="https://www.gmail.com" target="_blank"
           ><i class="fa-sharp fa-solid fa-envelope"></i> Send Email
         </a>
-        <a href="https://www.github.com" target="_blank"
-          ><i class="fa-brands fa-github"> </i> GitHub</a
-        >
-        <a href="https://www.linkedin.com" target="_blank"
+        <a href="https://github.com/MohdSalman92" target="_blank"
+          ><i class="fa-brands fa-github"> </i> GitHub</a>
+        <a href="https://www.linkedin.com/in/mohd-salman-70644963/" target="_blank"
           ><i class="fa-brands fa-linkedin"></i> Linkedin</a
         >
         <a href="https://www.whatsapp.com" target="_blank"
@@ -363,10 +367,23 @@
       </div>
     </footer>
     <!--footer section end -->
-
+  </div>
     <!-- custom js cdn ......... -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <script>
+      //  navbar js.........
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", ()=>{
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", ()=>{
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
+
       const bar = document.getElementById("bar-btn");
       const close = document.getElementById("close-btn");
       const opMenu = document.getElementById("open-menu");
