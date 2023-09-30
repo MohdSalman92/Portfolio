@@ -5,6 +5,7 @@
 }
 html {
   color-scheme: dark;
+  font-size: 11px;
 }
 * {
   padding: 0;
@@ -437,6 +438,9 @@ footer {
 
 /* ....media for iPad.... */
 @media only screen and (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
   .home {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -468,6 +472,9 @@ footer {
 }
 /* ....media for large Screens, TV.. */
 @media only screen and (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
   .home .profile-pic {
     width: 100%;
     height: 80vh;
