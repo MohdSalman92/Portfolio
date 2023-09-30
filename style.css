@@ -33,7 +33,7 @@ h1 {
 }
 h1 + p {
   text-align: center;
-  padding: 1rem 0rem 4rem 0;
+  padding: 1rem 0rem 2rem 0;
 }
 h1 span {
   color: var(--theme-color);
@@ -69,28 +69,28 @@ hr {
 }
 
 /* .......Gear Section........................ */
-.gear-dropup {
+.dropup {
   position:fixed;
   display: inline-block;
   right: 0;
   bottom: 50vh;
+  background-color:none;
 }
-.gear-dropup .dropbtn {
-  background-color: var(--antiPrimary-color);
+.dropup .dropbtn {
+  /* background-color: var(--antiPrimary-color); */
   /* color: var(--antiPrimary-color); */
   padding: 16px;
   font-size: 16px;
+  background-color:transparent;
   border: none;
 }
 .dropbtn i {
-  /* color: var(--antiPrimary-colorwhite); */
   animation: 1s gear-rotate linear infinite;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .dropup-content {
   display: none;
   position: absolute;
-  /* background-color: var(--antiPrimary-color); */
   min-width: 80px;
   bottom: 50px;
   z-index: 10;
@@ -101,33 +101,32 @@ hr {
   width: 1rem;
   height: 1rem;
   margin: 3px;
-  padding: 12px 16px;
+  padding: 16px 16px;
   border-radius: 50%;
   text-decoration: none;
   display: block;
 }
+.dropup:hover .dropup-content {
+  display: block;
+}
 .dropup-content a:nth-child(1){
-  background-color: royalblue;
+  background-color: #05a4fa;
 }
 .dropup-content a:nth-child(2){
   background-color: cyan;
 }
 .dropup-content a:nth-child(3){
-  background-color: hotpink;
+  background-color: #fa058c;
 }
-
-.dropup-content a:hover {
-  /* background-color: var(--theme-color);  */
-  /* color:var(--primary-color); */
+.dropup-content a:nth-child(4){
+  background-color: #9842f5;
 }
-
-.gear-dropup:hover .dropup-content {
-  display: block;
+.dropup-content a:nth-child(5){
+  background-color: #6bfa4b;
 }
-
-/* .gear-dropup:hover {
-  background-color: rgba(0,0,0, 0.8);
-} */
+.dropup-content a:nth-child(6){
+  background-color: #ff0a4b;
+}
 
 
 @keyframes gear-rotate {
@@ -138,29 +137,6 @@ hr {
     transform: rotate(-180deg);
   }
 }
-/* .gear-container button {
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  right: 0;
-  bottom: 50%;
-  background-color: white;
-  z-index: 100;
-}
-.gear-container button i {
-  color: black;
-  background-color: white;
-  animation: 1s gear-rotate linear infinite;
-  font-size: 2rem;
-}
-@keyframes gear-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-} */
 /* .......Gear Section end........... */
 
 /* ......Navbar section....... */
@@ -392,7 +368,7 @@ hr {
   font-size: 1.5rem;
 }
 .contact p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--theme-color);
 }
 .contact-links > a {
@@ -422,7 +398,7 @@ hr {
   color: var(--antiPrimary-color);
 }
 .contact-footer a:hover{
-  border-bottom: 2px solid var(--theme-color);
+color: var(--theme-color);
 }
 .contact-footer a i{
   color: var(--theme-color);

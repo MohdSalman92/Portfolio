@@ -17,7 +17,7 @@
   <body>
     <div class="app-container">
     <!-- .........Gear ........................... -->
-    <div class="gear-dropup">
+    <div class="dropup">
       <button class="dropbtn" id="gear-btn">
           <i class="fa-solid fa-gear"></i>
       </button>
@@ -26,6 +26,9 @@
         <a href="#" onClick="blue()"><span></span></a>
         <a href="#" onclick="cyan()"><span></span></a>
         <a href="#" onclick="red()"><span></span></a>
+        <a href="#" onclick="voilet()"><span></span></a>
+        <a href="#" onclick="grey()"><span></span></a>
+        <a href="#" onclick="redish()"><span></span></a>
       </div>
       
     </div>
@@ -374,13 +377,24 @@
       // ...gear function............
       const root = document.querySelector(':root');
     function blue(){
-      root.style.setProperty('--theme-color', 'royalblue');
+      root.style.setProperty('--theme-color', '#05a4fa');
     }
     function cyan(){
       root.style.setProperty('--theme-color', 'cyan');
     }
     function red(){
-      root.style.setProperty('--theme-color', 'hotpink');
+      root.style.setProperty('--theme-color', '#fa058c');
+    }
+    function voilet(){
+      root.style.setProperty('--theme-color', '#9842f5');
+    }
+    function grey(){
+      root.style.setProperty('--theme-color', '#6bfa4b');
+
+    }
+    function redish(){
+      root.style.setProperty('--theme-color', '#ff0a4b');
+
     }
       //  navbar js.........
 const hamburger = document.querySelector(".hamburger");
