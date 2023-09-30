@@ -1,7 +1,7 @@
 :root {
-  --theme-color: yellow;
-  --secondry-color: white;
-  --bg-color: black;
+  --primary-color: black;
+  --antiPrimary-colorwhite:white;
+  --theme-color:yellow;
 }
 html {
   color-scheme: dark;
@@ -11,7 +11,6 @@ html {
   margin: 0;
   box-sizing: border-box;
   font-family: poppins, sans-serif;
-  /* outline: 1px solid red; */
   overflow: none;
 }
 /* ..Common CSS for whole website... */
@@ -25,7 +24,6 @@ li span {
 }
 a {
   text-decoration: none;
-  /* color: white; */
 }
 h1 {
   font-size: 1.5rem;
@@ -49,7 +47,7 @@ h2 {
     padding: 0.5rem;
     margin: 1rem auto;
     background-color: var(--theme-color);
-    color: var(--bg-color);
+    color: var(--primary-color);
     display: block;
     cursor: pointer;
     text-transform: uppercase;
@@ -60,7 +58,7 @@ h2 {
 
 }
 .btn i{
-    color: var(--bg-color);
+    color: var(--primary-color);
     margin-right: 5px;
 }
 hr {
@@ -70,7 +68,76 @@ hr {
 }
 
 /* .......Gear Section........................ */
-.gear-container button {
+.gear-dropup {
+  position:fixed;
+  display: inline-block;
+  right: 0;
+  bottom: 50vh;
+}
+.gear-dropup .dropbtn {
+  background-color: var(--antiPrimary-color);
+  /* color: var(--antiPrimary-color); */
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropbtn i {
+  /* color: var(--antiPrimary-colorwhite); */
+  animation: 1s gear-rotate linear infinite;
+  font-size: 2rem;
+}
+.dropup-content {
+  display: none;
+  position: absolute;
+  /* background-color: var(--antiPrimary-color); */
+  min-width: 80px;
+  bottom: 50px;
+  z-index: 10;
+}
+
+.dropup-content a {
+  /* color:var(--antiPrimary-color); */
+  width: 1rem;
+  height: 1rem;
+  margin: 3px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  display: block;
+}
+.dropup-content a:nth-child(1){
+  background-color: royalblue;
+}
+.dropup-content a:nth-child(2){
+  background-color: cyan;
+}
+.dropup-content a:nth-child(3){
+  background-color: hotpink;
+}
+
+.dropup-content a:hover {
+  /* background-color: var(--theme-color);  */
+  /* color:var(--primary-color); */
+}
+
+.gear-dropup:hover .dropup-content {
+  display: block;
+}
+
+/* .gear-dropup:hover {
+  background-color: rgba(0,0,0, 0.8);
+} */
+
+
+@keyframes gear-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+/* .gear-container button {
   width: 60px;
   height: 60px;
   position: fixed;
@@ -92,7 +159,7 @@ hr {
   100% {
     transform: rotate(-180deg);
   }
-}
+} */
 /* .......Gear Section end........... */
 
 /* ......Navbar section....... */
@@ -147,7 +214,7 @@ hr {
 }
 .nav-bar .nav-link {
   transition: 0.7s ease;
-  color: var(--secondry-color);
+  color: var(--antiPrimary-color);
 
 }
 .nav-bar .nav-link:hover {
@@ -200,6 +267,9 @@ hr {
 }
 .about .about-right-col span{
   color: var(--theme-color);
+}
+.about .about-right-col dl{
+ text-align: left;
 }
 .about table span {
   margin-right: 1rem;
@@ -264,7 +334,7 @@ hr {
 }
 .skills .progress-container .progress-data {
   background-color: var(--theme-color);
-  color: var(--bg-color);
+  color: var(--primary-color);
   /* color: whitesmoke; */
   height: inherit;
   border-radius: inherit;
@@ -292,10 +362,10 @@ hr {
 .contact .info i {
   color: var(--theme-color);
   text-align: left;
-  margin-right: 1rem;
+  padding: 0.5rem;
 }
 .contact .info a{
-  color: var(--secondry-color);
+  color: var(--antiPrimary-color);
 }
 .contact .info a:hover {
   border-bottom: 2px solid var(--theme-color);
@@ -313,35 +383,47 @@ hr {
 } 
 /*
 .contact form button i {
-  color: var(--bg-color);
+  color: var(--primary-color);
   margin-right: 1rem;
 } */
 
-.contact > .title {
+.contact .title {
   font-size: 1.5rem;
 }
-.contact > p {
+.contact p {
   font-size: 1.6rem;
   color: var(--theme-color);
 }
 .contact-links > a {
   font-size: 1.3rem;
-  color: var(--secondry-color);
+  color: var(--antiPrimary-color);
   padding: 5px;
   text-decoration: none;
   margin: 12px;
-}
-.contact-links > a:hover {
-  background-color: var(--theme-color);
-  color: var(--bg-color);
 }
 .contact-footer {
   text-align: center;
   font-size: 1.5rem;
   margin: 2rem;
 }
-.contact-footer .title,
-i {
+.contact-footer .title{
+  color: var(--theme-color);
+}
+.contact-footer .link{
+  /* margin: 0 auto; */
+  display: inline-block;
+  margin: 1rem;
+}
+.contact-footer a{
+  /* text-align: center; */
+  display: inline-block;
+  
+  color: var(--antiPrimary-color);
+}
+.contact-footer a:hover{
+  border-bottom: 2px solid var(--theme-color);
+}
+.contact-footer a i{
   color: var(--theme-color);
 }
 /*contact section end */

@@ -17,10 +17,17 @@
   <body>
     <div class="app-container">
     <!-- .........Gear ........................... -->
-    <div class="gear-container">
-      <button id="gear-btn" onclick="gearClick()">
-        <i class="fa-solid fa-gear"></i>
+    <div class="gear-dropup">
+      <button class="dropbtn" id="gear-btn">
+          <i class="fa-solid fa-gear"></i>
       </button>
+    
+      <div class="dropup-content">
+        <a href="#" onClick="blue()"><span></span></a>
+        <a href="#" onclick="cyan()"><span></span></a>
+        <a href="#" onclick="red()"><span></span></a>
+      </div>
+      
     </div>
     <!--........Navbar .............. -->
     <nav class="nav-bar">
@@ -98,11 +105,11 @@
         <div class="grid-col-2">
           <div class="left-col">
             <div class="about-img-container">
-              <img src="./image/s_off.png" alt="profile pic" />
+              <img src="./image/profile.jpeg" alt="profile pic" />
             </div>
           </div>
 
-          <div class="about-right-col">
+          <div class="about-right-col" style="overflow-x:auto;">
             <table>
               <tr>
                 <td><span>First Name</span></td>
@@ -135,26 +142,17 @@
               </tr>
               <tr>
                 <td><span>Languages</span></td>
-                <td>English |  Hindi</td>
+                <td>English | Hindi</td>
               </tr>
               <tr>
                 <td><span>Phone</span></td>
                 <td>+91 99 580 98 225</td>
               </tr>
               <tr>
-                <td><span class="Eid">Email</span></td>
-                <td>salmanansaari92@gmail.com</td>
+                <td><span>Email</span></td>
+                <td>salmanasaari92@gmail.com</td>
               </tr>
-              <!-- <tr>
-                <td><span>LinkedIn</span></td>
-                <td>salmanansaari92</td>
-              </tr>
-              <tr>
-                <td><span>GitHub</span></td>
-                <td>salmanansaari92</td>
-              </tr> -->
-
-            </table>
+              </table>
             <div class="cv-download">
               <a class="btn"
                 href="https://mohdsalman92.github.io/Portfolio/image/SalmanCV23.pdf"
@@ -338,24 +336,26 @@
     <section class="contact-footer" id="contact-footer">
       <div class="title">Let's work together...</div>
       <p>How do you take your Tea?</p>
-      <div class="contact-links">
-        <a href="https://www.facebook.com/salmanansaari92" target="_blank"
-          ><i class="fa-brands fa-facebook"> </i> Facebook</a
-        >
-        <a href="https://www.instagram.com/salmanansaari92" target="_blank"
-          ><i class="fa-brands fa-square-instagram"></i> Instagram</a
-        >
-        <a href="https://www.gmail.com" target="_blank"
-          ><i class="fa-sharp fa-solid fa-envelope"></i> Send Email
-        </a>
-        <a href="https://github.com/MohdSalman92" target="_blank"
-          ><i class="fa-brands fa-github"> </i> GitHub</a>
-        <a href="https://www.linkedin.com/in/mohd-salman-70644963/" target="_blank"
-          ><i class="fa-brands fa-linkedin"></i> Linkedin</a
-        >
-        <a href="https://www.whatsapp.com" target="_blank"
-          ><i class="fa-solid fa-mobile-screen-button"> </i> Call Us</a
-        >
+      <div class="contact-links d-flex">
+        <div class="link">
+            <a href="https://www.facebook.com/salmanansaari92" target="_blank"
+              ><i class="fa-brands fa-facebook"> </i> Facebook</a></div>
+        <div class="link">
+            <a href="https://www.instagram.com/salmanansaari92" target="_blank"
+              ><i class="fa-brands fa-square-instagram"></i> Instagram</a></div>
+        <div class="link">
+            <a href="https://www.gmail.com" target="_blank"
+              ><i class="fa-sharp fa-solid fa-envelope"></i> Send Email
+            </a></div>
+        <div class="link">
+            <a href="https://github.com/MohdSalman92" target="_blank"
+              ><i class="fa-brands fa-github"> </i> GitHub</a></div>
+        <div class="link">
+            <a href="https://www.linkedin.com/in/mohd-salman-70644963/" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i> Linkedin</a></div>
+        <div class="link">
+            <a href="https://www.whatsapp.com" target="_blank"
+              ><i class="fa-solid fa-mobile-screen-button"> </i> Call Us</a></div>
       </div>
     </section>
     <!-- contact section end -->
@@ -372,6 +372,17 @@
     <!-- custom js cdn ......... -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <script>
+      // ...gear function............
+      const root = document.querySelector(':root');
+    function blue(){
+      root.style.setProperty('--theme-color', 'royalblue');
+    }
+    function cyan(){
+      root.style.setProperty('--theme-color', 'cyan');
+    }
+    function red(){
+      root.style.setProperty('--theme-color', 'hotpink');
+    }
       //  navbar js.........
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -389,20 +400,21 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
       const close = document.getElementById("close-btn");
       const opMenu = document.getElementById("open-menu");
 
-      function openClick() {
-        opMenu.style.display = "block";
-        bar.style.display = "none";
-      }
-      function closeClick() {
-        opMenu.style.display = "none";
-        bar.style.display = "block";
-      }
+      // function openClick() {
+      //   opMenu.style.display = "block";
+      //   bar.style.display = "none";
+      // }
+      // function closeClick() {
+      //   opMenu.style.display = "none";
+      //   bar.style.display = "block";
+      // }
       /*..........typing Effects......... */
       var type = new Typed(".typing-text", {
         strings: ["web developer", "React Developer", "Front End Developer","Freelancer"],
         typeSpeed: 120,
         loop: true,
       });
+
     </script>
   </body>
 </html>
