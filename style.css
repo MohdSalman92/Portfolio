@@ -425,7 +425,7 @@ footer {
   .home .profile-pic {
     width: 100%;
     height: 50vh;
-    border: none;
+    border: 2px dashed var(--theme-color);
     border-radius: 1rem;
   }
   
